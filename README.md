@@ -6,6 +6,7 @@ A collection of agent skills. Each skill is a folder containing a `SKILL.md`.
 
 | Skill | What it does |
 | --- | --- |
+| [anthropic-pdf-style](anthropic-pdf-style/SKILL.md) | PDF reports and guides in the Anthropic / Claude house style: an HTML template and a render script that uses the fonts from the Claude desktop app. |
 | [performance-optimization-loop](performance-optimization-loop/SKILL.md) | Slow app or performance sprint: measure user journeys, optimize verified bottlenecks, and preserve proven gains. |
 
 ## Install
