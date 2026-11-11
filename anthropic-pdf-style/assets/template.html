@@ -3,8 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>DOCUMENT TITLE</title>
-<!-- Only needed when the document contains Khmer; delete otherwise. -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600&display=swap">
 <style>
 /* Layout: one reading column on A4. Follows Anthropic's own report template (official plugins): Anthropic Sans for text and headings,
    Anthropic Serif for the title, warm off-white page, raised panels with hairline borders, Clay as the single accent. */
@@ -13,12 +11,14 @@
 @font-face { font-family: "Anthropic Serif"; src: url("fonts/AnthropicSerif-Romans-Variable-25x258.ttf") format("truetype"); font-weight: 300 800; font-style: normal; }
 @font-face { font-family: "Anthropic Serif"; src: url("fonts/AnthropicSerif-Italics-Variable-25x258.ttf") format("truetype"); font-weight: 300 800; font-style: italic; }
 @font-face { font-family: "Anthropic Mono"; src: url("fonts/AnthropicMonoVariable.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Khmer OS Battambang"; src: url("fonts/KhmerOSbattambang.ttf") format("truetype"); font-weight: 400; font-style: normal; }
+:lang(km) { line-height: 1.9; }
 :root {
   --bg: #f9f9f7; --surface: #fcfcfb; --sunk: #f3f2ee; --ink: #0b0b0b; --ink-2: #52514e; --ink-3: #6b6a65; --line: #e1e0d9;
   --accent: #d97757; --accent-ink: #b85f43; --focus-wash: #fbf1ec; --focus-line: #ecc0ae;
   --ok: #1f6b1f; --ok-bg: #e4f1e1; --part: #8a5a00; --part-bg: #fdf0cf; --miss: #a82e2e; --miss-bg: #f9e3e3;
-  --body: "Anthropic Sans", "Noto Sans Khmer", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
-  --hero: "Anthropic Serif", "Noto Sans Khmer", Georgia, serif;
+  --body: "Anthropic Sans", "Khmer OS Battambang", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --hero: "Anthropic Serif", "Khmer OS Battambang", Georgia, serif;
   --mono: "Anthropic Mono", ui-monospace, "SF Mono", Menlo, monospace;
 }
 @page { size: A4; margin: 0; }

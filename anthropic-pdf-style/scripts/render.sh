@@ -6,6 +6,8 @@ set -euo pipefail
 in="$1"; out="$2"
 dir="$(cd "$(dirname "$in")" && pwd)"
 mkdir -p "$dir/fonts"
+here="$(cd "$(dirname "$0")/.." && pwd)"
+cp -n "$here"/assets/fonts/*.ttf "$dir/fonts/" 2>/dev/null || true
 found=0
 for src in "${ANTHROPIC_FONTS_DIR:-}" "/Applications/Claude.app/Contents/Resources/fonts" "$HOME/Library/Fonts"; do
   [ -n "$src" ] && [ -d "$src" ] || continue

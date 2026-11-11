@@ -9,7 +9,7 @@ Start from the template and change content only. Do not improvise a different lo
 
 ## What the style is
 
-- **Type:** Anthropic Sans for body text, headings, labels and table text, with real weights (400 body, 600 labels, 650 headings and bold). Anthropic Serif only for the document title (`h1`, weight 400, optical size 48). Anthropic Mono for code. Khmer falls back to Noto Sans Khmer.
+- **Type:** Anthropic Sans for body text, headings, labels and table text, with real weights (400 body, 600 labels, 650 headings and bold). Anthropic Serif only for the document title (`h1`, weight 400, optical size 48). Anthropic Mono for code. Khmer uses Khmer OS Battambang (shipped in `assets/fonts/`; regular weight only, so Chrome synthesises bold). Mark Khmer passages with `lang="km"` so they get the taller line height Khmer needs.
 - **Page:** A4, warm off-white `#f9f9f7` edge to edge, near-black ink `#0b0b0b`, secondary text `#52514e`, labels `#6b6a65`, hairline rules `#e1e0d9`.
 - **Panels:** raised surface `#fcfcfb` with a 1px hairline border and 10px radius. Used for the three fact tiles under the title and nothing else by default.
 - **Accent:** clay `#d97757` is the only accent. It appears in the one callout (`.note`) and, darkened to `#b85f43`, in table row IDs. Status pills use green, amber and red and are not the accent.
@@ -39,9 +39,10 @@ Looks that miss, so do not use them: Inter with Space Grotesk on white with a bl
 
 ## Fonts
 
-- The fonts are not shipped with this skill. They are Anthropic's proprietary typefaces.
+- The Anthropic fonts are not shipped with this skill. They are Anthropic's proprietary typefaces.
 - `scripts/render.sh` copies them from the Claude desktop app on the same machine (`/Applications/Claude.app/Contents/Resources/fonts/`), or from `~/Library/Fonts`, or from a folder named in `ANTHROPIC_FONTS_DIR`. It stops with a message when it finds none.
 - The app has Anthropic Sans and Anthropic Serif. Anthropic Mono is optional; without it, code falls back to the system monospace font.
+- Khmer OS Battambang ships in `assets/fonts/` (LGPL 2.1, Danh Hong) and is copied beside the HTML on every render.
 - The fonts get embedded in the PDF. Tell the user once when a document is meant to go outside their company.
 
 ## Writing
